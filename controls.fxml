@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.sbcontrols">
+   <children>
+      <TextArea fx:id="actions" layoutX="381.0" layoutY="53.0" prefHeight="315.0" prefWidth="174.0" />
+      <Label layoutX="395.0" layoutY="27.0" text="Action Log" textFill="WHITE">
+         <font>
+            <Font name="OCR A Extended" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="21.0" layoutY="342.0" mnemonicParsing="false" onAction="#clearg" text=" Clear Game" />
+      <Group layoutX="196.0" layoutY="263.0">
+         <children>
+            <TextField fx:id="newawayname" layoutY="31.0" onKeyReleased="#updatean" />
+            <Label text="Edit Away Team Name:" textFill="WHITE" />
+         </children>
+      </Group>
+      <Group layoutX="20.0" layoutY="267.0">
+         <children>
+            <TextField fx:id="newhomename" layoutY="23.0" onKeyReleased="#updatehn" />
+            <Label text="Edit Home Team Name:" textFill="WHITE" />
+         </children>
+      </Group>
+      <Group layoutX="39.0" layoutY="80.0">
+         <children>
+            <Button layoutY="29.0" mnemonicParsing="false" onAction="#handleHomeFG" prefHeight="33.0" prefWidth="125.0" text="+3 Feild Goal" />
+            <Button layoutY="67.0" mnemonicParsing="false" onAction="#handleHomeS" prefHeight="33.0" prefWidth="125.0" text="+2 Saftey" />
+            <Button layoutY="104.0" mnemonicParsing="false" onAction="#handleHomeEP" prefHeight="33.0" prefWidth="125.0" text="+1 Extra Point" />
+         </children>
+      </Group>
+      <Button layoutX="135.0" layoutY="237.0" mnemonicParsing="false" onAction="#undoac" prefHeight="25.0" prefWidth="81.0" text="UNDO" />
+      <Group layoutX="211.0" layoutY="80.0">
+         <children>
+            <Button layoutY="29.0" mnemonicParsing="false" onAction="#handleawayFG" prefHeight="33.0" prefWidth="125.0" text="+3 Feild Goal" />
+            <Button layoutY="66.0" mnemonicParsing="false" onAction="#handleawayS" prefHeight="33.0" prefWidth="125.0" text="+2 Saftey" />
+            <Button layoutY="104.0" mnemonicParsing="false" onAction="#handleawayEP" prefHeight="33.0" prefWidth="125.0" text="+1 Extra Point" />
+         </children>
+      </Group>
+      <Label fx:id="updatehomename" layoutX="33.0" layoutY="40.0" prefHeight="30.0" prefWidth="133.0" text="Empty Home" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="updateawayname" layoutX="211.0" layoutY="40.0" text="Empty Away" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="39.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleHomeTD" prefHeight="33.0" prefWidth="125.0" text="+6 Touchddown" />
+      <Button layoutX="211.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleawayTD" prefHeight="33.0" prefWidth="125.0" text="+6 Touchddown" />
+   </children>
+</AnchorPane>
